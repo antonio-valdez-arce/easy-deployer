@@ -38,7 +38,7 @@ Installation
 
 5. Test your task running it from the browser:
 
-http://deploy.yourdomain.com/?task=task-md5-key
+ `http://deploy.yourdomain.com/?task=task-md5-key`
 
 6. Once your task runs correctly, create a webhook in github (in the repository of the app you want to deploy), in the url enter the url of your task.
 
