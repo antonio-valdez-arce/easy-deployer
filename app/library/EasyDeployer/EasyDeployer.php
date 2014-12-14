@@ -8,22 +8,14 @@ use EasyDeployer\HttpRequest;
  */
 class EasyDeployer
 {
-	protected $request;
-
-	/**
-	 * Object constructor
-	 */
-	public function __construct( HttpRequest $request )
-	{
-		$this->request = $request;
-	}
 
 	/**
 	 * Resolves task and makes deployment
 	 */
-	public function deploy()
+	public function deploy( array $task )
 	{
-		
+		$sh_command = 'sh ' . Config::get('task_files_path') . $task['sh_file'];
+		system($sh_command);	
 	}
 	
 }
