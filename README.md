@@ -13,12 +13,12 @@ Installation
 3. Copy `/config.php.sample` to `/config.php`, change it to fit your needs:
 
  ```php
- $config['tasks'] = array(
-	'task-md5-key' => array(
-						'name' => 'Sample site',
-						'sh_file' => 'sample.sh',
-					  ),
- );
+	 $config['tasks'] = array(
+		'task-md5-key' => array(
+							'name' => 'Sample site',
+							'sh_file' => 'sample.sh',
+						  ),
+	 );
  ```
 
  *task-md5-key*: the md5 key identifying the task (will be past in the url)
@@ -27,7 +27,14 @@ Installation
 
 4. Copy `/tasks/sample.sh` to `/tasks/your-task-name.sh` and write your app deploying script.
 
-   Here you have to write your actual build and deployment instructions. For example: clone your jekyll blog from github, build it (of couse you need to have jekyll installed in your server), copy built files to the correct location, finally clean up.
+   Here you have to write your actual build and deployment instructions. 
+
+   For example: 
+   * clone your jekyll blog from github 
+   * build it (of course you need to have jekyll installed in your server) 
+   * copy built files to the correct location
+   * finally clean up
+   * etc.
 
 5. Test your task running it from the browser:
 
