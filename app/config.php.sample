@@ -1,11 +1,22 @@
 <?php
 
+/**
+ * @todo make the debug to work
+ */
 $config['debug'] = false;
 
+/**
+ * The path containing the tasks SH files
+ */
 $config['task_files_path'] = APPLICATION_PATH . DIRECTORY_SEPARATOR . 'tasks' . DIRECTORY_SEPARATOR;
 
+/**
+ * Array containing the tasks. The keys are an md5 hash and the values are arrays with the tas configuration.
+ * The minimum configuration is 'name' and 'sh_file'.
+ * The md5 hash in the key will be passed in the url to identify the task.
+ */
 $config['tasks'] = array(
-	'your-md5-key' => array(
+	'task-md5-key' => array(
 						'name' => 'Sample site',
 						'sh_file' => 'sample.sh',
 					  ),
